@@ -1,0 +1,486 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+* {
+    box-sizing: border-box;
+}
+.scrolling{
+    height: auto;
+    width: 100%;
+}
+.scrolling p{
+    animation: scroll 10s linear infinite;
+    color: red;
+    overflow: hidden;
+    white-space: nowrap;
+    text-decoration: none;
+}
+@keyframes scroll {
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translate(-40%);
+    }
+}
+
+/* intro...................start ...........................*/
+.center{
+    text-align: center;
+}
+/*.................end....................................*/
+
+
+/* achievements start...................................... */
+
+figcaption{
+    position: absolute;
+    bottom: 1rem;
+    margin: 0 1rem;
+    color: #ffffff;
+}
+/* achievements close.................................................... */
+/* gallery start......................................... */
+.gallery {
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+    -webkit-column-width: 33%;
+    -moz-column-width: 33%;
+    column-width: 33%;
+    padding: 9px 20px;
+
+}
+
+.gallery img {
+    margin-bottom: 9px;
+}
+
+.pics {
+    -webkit-transition: all 350s ease;
+    transition: all 350s ease;
+    cursor: pointer;
+
+}
+
+.gallery img:hover {
+    filter: opacity(.7)
+}
+
+@media (max-width: 991px) {
+    .gallery {
+        -webkit-column-count: 2;
+        -moz-column-count: 2;
+        column-count: 2;
+        -webkit-column-width: 50%;
+        -moz-column-width: 50%;
+        column-width: 50%;
+    }
+}
+
+@media (max-width: 540px) {
+    .gallery {
+        -webkit-column-count: 1;
+        -moz-column-count: 1;
+        column-count: 1;
+        -webkit-column-width: 100%;
+        -moz-column-width: 100%;
+        column-width: 100%;
+    }
+}
+
+/* model....... */
+
+.model {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:rgba(0, 0, 0, 0.7);
+    transition: opacity  .4s ease, visibility .4s ease, transform .5s ease-in-out;
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(0);
+    overflow: hidden;
+    z-index: 999;
+
+}
+
+.model.open {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+}
+
+.model img {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 100%;
+    display: block;
+    line-height: 0;
+    padding: 20px 0 20px;
+    margin: 0 auto;
+}
+.model.open svg{
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    width: 4rem;
+    height: 4rem;
+    padding: 5px;
+    cursor: pointer;
+    color: #ffffff;
+}
+/* gallery end.................................................. */
+/* about start................................ */
+.bg-box {
+    background: url('../public/images/about-bg.jpg');
+}
+
+.bg-box h1 {
+    text-align: center;
+}
+
+.bg-box h1>u {
+    color: #ffffff;
+}
+
+/* about end............................... */
+/* footer start....................................... */
+iframe {
+    width: 100%;
+    height: 350px;
+}
+
+.footer {
+    background: url('../public/images/footer.jpg');
+}
+.copyright{
+    color: #585858;
+    padding: 0 12px;
+    font-size: small;
+    text-align: center;
+}
+.card-body>p>a:hover{
+   color: red;
+   text-decoration: none;
+}
+.text>p{
+    width: 0ch;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 5px;
+    animation: text 10s infinite;
+}
+@keyframes text {
+    0%{
+        width: 0ch;
+    }
+    50%{
+        width: 31ch;
+    }
+    
+}
+
+/* footer end............................................. */
+/* info start............................................ */
+.bd {
+    border: 5px solid rgb(255, 255, 255);
+}
+
+.img-shadow {
+    box-shadow: 0px 10px 10px 0px rgb(0, 0, 0);
+}
+
+.pd {
+    padding-left: 50px;
+}
+
+/* info end.............................................. */
+/*section start.....................................*/
+.shadow-1 {
+    box-shadow: 0px 0px 20px #ffffff;
+}
+
+.shadow-1:hover {
+    box-shadow: 0px 0px 20px #ffffff;
+    animation: scale 4s linear;
+    animation-fill-mode: forwards;
+}
+@keyframes scale {
+    0% {
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+    }
+
+    100% {
+        -webkit-transform: scale(1.0);
+        transform: scale(1.0);
+    }
+}
+
+.section {
+    padding: 30px;
+    border: 5px solid rgb(255, 255, 255);
+}
+
+.section>.ph3 {
+    text-align: center;
+    font-size: 20px;
+}
+
+/*section end.................................*/
+/* main start.................................. */
+
+.d-sm-block>img {
+    height: 50px;
+    width: 50px;
+}
+
+/* main end................................. */
+/* navbar start........................... */
+.togg{
+    display: flex;
+}
+.menu{
+    margin-left:100px;
+}
+.logo{
+    padding:10px 0 0 10px;
+}
+ul>li>a{
+    margin-left: 40px;
+    font-size: large;
+}
+ul>li>:hover {
+   color: red;
+   font-size: larger;
+}
+
+.nav-item {
+    list-style-type: none;
+    margin-left: 20px;
+
+}
+.nav-item >a{
+ text-decoration: none;
+}
+
+.navbar1 {
+    background: url('../public/images/navbar.jpg');
+}
+
+.navbar {
+    background: rgba(26, 25, 25, 0.556);
+
+    
+}
+
+.s {
+    color: rgb(255, 0, 0);
+}
+
+.a {
+    color: rgb(255, 255, 255);
+}
+
+.f {
+    color: rgb(10, 187, 10);
+}
+
+.g {
+    margin-left: 10px;
+    animation: animate 1s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        color: blue;
+    }
+
+    10% {
+        color: red;
+    }
+
+    20% {
+        color: yellow;
+    }
+
+    30% {
+        color: rgb(169, 72, 235);
+    }
+
+    40% {
+        color: aqua;
+    }
+
+    50% {
+        color: green;
+    }
+}
+
+.o {
+    animation: animate 2s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        color: blue;
+    }
+
+    10% {
+        color: red;
+    }
+
+    20% {
+        color: yellow;
+    }
+
+    30% {
+        color: rgb(169, 72, 235);
+    }
+
+    40% {
+        color: aqua;
+    }
+
+    50% {
+        color: green;
+    }
+}
+
+.oo {
+    animation: animate 3s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        color: blue;
+    }
+
+    10% {
+        color: red;
+    }
+
+    20% {
+        color: yellow;
+    }
+
+    30% {
+        color: rgb(169, 72, 235);
+    }
+
+    40% {
+        color: aqua;
+    }
+
+    50% {
+        color: green;
+    }
+}
+
+.gg {
+    animation: animate 1s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        color: blue;
+    }
+
+    10% {
+        color: red;
+    }
+
+    20% {
+        color: yellow;
+    }
+
+    30% {
+        color: rgb(169, 72, 235);
+    }
+
+    40% {
+        color: aqua;
+    }
+
+    50% {
+        color: green;
+    }
+}
+
+.l {
+    animation: animate 2s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        color: blue;
+    }
+
+    10% {
+        color: red;
+    }
+
+    20% {
+        color: yellow;
+    }
+
+    30% {
+        color: rgb(169, 72, 235);
+    }
+
+    40% {
+        color: aqua;
+    }
+
+    50% {
+        color: green;
+    }
+}
+
+.e {
+    animation: animate 3s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        color: blue;
+    }
+
+    10% {
+        color: red;
+    }
+
+    20% {
+        color: yellow;
+    }
+
+    30% {
+        color: rgb(169, 72, 235);
+    }
+
+    40% {
+        color: aqua;
+    }
+
+    50% {
+        color: green;
+    }
+}
+
+.social>a:hover {
+    background: rgb(255, 0, 0);
+    border-radius: 50px;
+}
+
+/* navbar end......................... */
