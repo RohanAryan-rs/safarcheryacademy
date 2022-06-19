@@ -15,7 +15,7 @@ const Footer = () => {
                         <p className='my-4'>*** In modern times, it is a competitive sport and recreational activity.A person who practices archery is
                             typically called an archer, bowman or toxophilite.***</p>
                             <div className='text'>
-                            <p className='text-danger display-6'><em>Classes available in your city Lucknow</em></p>
+                            <p className='text-danger fs-6'><em>Classes available in your city Lucknow</em></p>
                             </div>
                         <p><a target='_blank' rel='noopener noreferrer' href="https://twitter.com/SAF_Archery"><FaTwitter />@SAF_Archery</a></p>
                         <p><a target='_blank' rel='noopener noreferrer' href="https://www.facebook.com/pages/category/Archery-Range/S-A-F-Archery-Academy-1409270862541956/"><FaFacebook />SAF Archery Academy</a></p>
